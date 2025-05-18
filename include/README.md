@@ -29,6 +29,18 @@ Implements the **Boost.Spirit grammar** for parsing:
 - Add operator precedence parsing for complex WHERE conditions
 - Add support for string literals and numbers
 - Support quoted identifiers (e.g., `"user name"`)
+  
+📌 **Correction Made here!**:
+The grammar was updated to support the wildcard `*` in column selection:
+```cpp
+auto const identifier_def = x3::lexeme[+x3::char_("a-zA-Z0-9_*")];
+```
+This allows queries like:
+
+```sql
+SELECT * FROM products WHERE price=100
+```
+to be parsed correctly.
 
 ---
 
