@@ -10,7 +10,7 @@ This project is a minimal, modular, and extensible **SQL parser** built using **
 ├── include/           # Header files (AST, Grammar, Parser)
 │   ├── AST.hpp
 │   ├── SQLGrammar.hpp
-|   ├── SQLGrammar.hpp
+|   ├── SQLParser.hpp
 │   └── README.md      # Document with implement files explanation
 ├── src/               # Implementation (.cpp) files
 │   └── SQLParser.cpp
